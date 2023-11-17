@@ -1,0 +1,20 @@
+### Register
+POST http://localhost:3000/api/v1/auth/register
+Content-Type: application/json
+
+{
+    "email":"okorieifeanyi4u@gmail.com",
+    "username":"ifymatics",
+    "roles":["superAdmin"],
+    "password":"1234567"
+}
+
+### LOGIN
+POST http://localhost:3000/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "email":"okorieifeanyi4u@gmail.com",
+   
+    "password":"1234567"
+}

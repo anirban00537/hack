@@ -1,0 +1,57 @@
+//POST SCHOOL REGISTRATION REQUEST
+POST http://localhost:3000/api/v1/school
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWMzMTUwMGQwZGQ3ZDgzZmJlYmYzNCIsImVtYWlsIjoib2tvcmllaWZlYW55aTR1QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiaWZ5bWF0aWNzIiwicm9sZXMiOlt7Il9pZCI6IjY0NWMyZjNiNjI0Y2I4MDQ1YzUxMGUxNiIsIm5hbWUiOiJzdXBlckFkbWluIn1dLCJzY2hvb2wiOltdLCJjcmVhdGVkQXQiOiIyMDIzLTA1LTExVDAwOjA1OjM2LjMyMloiLCJ1cGRhdGVkQXQiOiIyMDIzLTA1LTExVDAwOjA1OjM2LjMyMloiLCJfX3YiOjAsImlhdCI6MTY4NDkyMDEzOSwiZXhwIjoxNjg1MDA2NTM5fQ.f3qEO0prTIpzwOhSEmzV1CvtLanzNreKdumQzsxAob0
+
+{
+    "name":"ABC high schhol",
+    "address":"123 Drive Avenue Saudi Arabia",
+    "email":"ABC@school.com",
+    "phone":"1234567890",
+    "regNo":"1243GB12",
+    "contactPerson":"John Doe"
+}
+### GET ALL SCHOOLS
+GET http://localhost:3000/api/v1/school
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWMzMTUwMGQwZGQ3ZDgzZmJlYmYzNCIsImVtYWlsIjoib2tvcmllaWZlYW55aTR1QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiaWZ5bWF0aWNzIiwicm9sZXMiOlt7Il9pZCI6IjY0NWMyZjNiNjI0Y2I4MDQ1YzUxMGUxNiIsIm5hbWUiOiJzdXBlckFkbWluIn1dLCJzY2hvb2wiOltdLCJjcmVhdGVkQXQiOiIyMDIzLTA1LTExVDAwOjA1OjM2LjMyMloiLCJ1cGRhdGVkQXQiOiIyMDIzLTA1LTExVDAwOjA1OjM2LjMyMloiLCJfX3YiOjAsImlhdCI6MTY4NTAwNjY3MCwiZXhwIjoxNjg1MDkzMDcwfQ.ojvYRW8NHqX3YVRXqXmuPM-WCe18X4S2KdxuEF0BUqk
+
+### APROVE A SCHOOL
+PATCH http://localhost:3000/api/v1/school/645bcac3fdf6ac2225641982
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWMzMTUwMGQwZGQ3ZDgzZmJlYmYzNCIsImVtYWlsIjoib2tvcmllaWZlYW55aTR1QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiaWZ5bWF0aWNzIiwicm9sZXMiOlt7Il9pZCI6IjY0NWMyZjNiNjI0Y2I4MDQ1YzUxMGUxNiIsIm5hbWUiOiJzdXBlckFkbWluIn1dLCJzY2hvb2wiOltdLCJjcmVhdGVkQXQiOiIyMDIzLTA1LTExVDAwOjA1OjM2LjMyMloiLCJ1cGRhdGVkQXQiOiIyMDIzLTA1LTExVDAwOjA1OjM2LjMyMloiLCJfX3YiOjAsImlhdCI6MTY4Mzc2MzU0NywiZXhwIjoxNjgzODQ5OTQ3fQ.lp1LrFmF41wg5V5BoCjEKfRyMbVpPnC2BbqnZK8eqHE
+Content-Type: application/json
+
+{
+    "status":"rejected"
+}
+### Create Blackboard school
+POST http://localhost:3000/api/v1/school/blackboard
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWMzMTUwMGQwZGQ3ZDgzZmJlYmYzNCIsImVtYWlsIjoib2tvcmllaWZlYW55aTR1QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiaWZ5bWF0aWNzIiwicm9sZXMiOlt7Il9pZCI6IjY0NWMyZjNiNjI0Y2I4MDQ1YzUxMGUxNiIsIm5hbWUiOiJzdXBlckFkbWluIn1dLCJzY2hvb2wiOltdLCJjcmVhdGVkQXQiOiIyMDIzLTA1LTExVDAwOjA1OjM2LjMyMloiLCJ1cGRhdGVkQXQiOiIyMDIzLTA1LTExVDAwOjA1OjM2LjMyMloiLCJfX3YiOjAsImlhdCI6MTY4Mzc2MzU0NywiZXhwIjoxNjgzODQ5OTQ3fQ.lp1LrFmF41wg5V5BoCjEKfRyMbVpPnC2BbqnZK8eqHE
+
+{
+    "name":"Blackboard high schhol",
+    "address":"123 Drive Avenue Saudi Arabia",
+    "email":"blackboard@school.com",
+    "phone":"1234567890",
+    "regNo":"1243GB12",
+    "contactPerson":"Blackboard admin"
+}
+
+### GET ALL BLACKBOARD SCHOOLS
+GET http://localhost:3000/api/v1/school/blackboard
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWMzMTUwMGQwZGQ3ZDgzZmJlYmYzNCIsImVtYWlsIjoib2tvcmllaWZlYW55aTR1QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiaWZ5bWF0aWNzIiwicm9sZXMiOlt7Il9pZCI6IjY0NWMyZjNiNjI0Y2I4MDQ1YzUxMGUxNiIsIm5hbWUiOiJzdXBlckFkbWluIn1dLCJzY2hvb2wiOltdLCJjcmVhdGVkQXQiOiIyMDIzLTA1LTExVDAwOjA1OjM2LjMyMloiLCJ1cGRhdGVkQXQiOiIyMDIzLTA1LTExVDAwOjA1OjM2LjMyMloiLCJfX3YiOjAsImlhdCI6MTY4NDkyMDEzOSwiZXhwIjoxNjg1MDA2NTM5fQ.f3qEO0prTIpzwOhSEmzV1CvtLanzNreKdumQzsxAob0
+Content-Type: application/json
+
+### UPDATE BLACKBOARD SCHOOL
+PUT http://localhost:3000/api/v1/school/blackboard/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWMzMTUwMGQwZGQ3ZDgzZmJlYmYzNCIsImVtYWlsIjoib2tvcmllaWZlYW55aTR1QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiaWZ5bWF0aWNzIiwicm9sZXMiOlt7Il9pZCI6IjY0NWMyZjNiNjI0Y2I4MDQ1YzUxMGUxNiIsIm5hbWUiOiJzdXBlckFkbWluIn1dLCJzY2hvb2wiOltdLCJjcmVhdGVkQXQiOiIyMDIzLTA1LTExVDAwOjA1OjM2LjMyMloiLCJ1cGRhdGVkQXQiOiIyMDIzLTA1LTExVDAwOjA1OjM2LjMyMloiLCJfX3YiOjAsImlhdCI6MTY4Mzc2MzU0NywiZXhwIjoxNjgzODQ5OTQ3fQ.lp1LrFmF41wg5V5BoCjEKfRyMbVpPnC2BbqnZK8eqHE
+
+{
+    "name":"Blackboard high schhol",
+    "address":"123 Drive Avenue Saudi Arabia",
+    "email":"blackboard@school.com",
+    "phone":"1234567890",
+    "regNo":"1243GB12",
+    "contactPerson":"Blackboard admin"
+}
